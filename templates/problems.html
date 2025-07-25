@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+{% extends "base.html" %}
+
+{% block content %}
+<h2>🚨 Common Problems</h2>
+<p style="margin-bottom: 20px;">Here are the most frequently reported issues from customers:</p>
+
+<div class="problem-grid">
+    <div class="problem-card">
+        <h3>🔐 Login Issues</h3>
+        <p>Users face trouble logging in due to incorrect credentials, expired sessions, or account lockouts.</p>
+    </div>
+
+    <div class="problem-card">
+        <h3>💳 Payment Not Reflected</h3>
+        <p>Transaction completed but the amount isn't reflected in their account. May be due to delay or gateway error.</p>
+    </div>
+
+    <div class="problem-card">
+        <h3>⚠️ App Crash / Bug</h3>
+        <p>App crashes during checkout or while navigating. Most common on Android version 9 and below.</p>
+    </div>
+
+    <div class="problem-card">
+        <h3>💰 Request for Refund</h3>
+        <p>Refunds requested for failed services or incorrect charges. Often accompanied by tickets or email escalation.</p>
+    </div>
+</div>
+{% endblock %}
+
+</body>
+</html>

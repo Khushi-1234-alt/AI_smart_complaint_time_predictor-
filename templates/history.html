@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+{% extends "base.html" %}
+
+{% block content %}
+<h2>📜 Complaint History</h2>
+
+{% if data %}
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Description</th>
+        <th>Category</th>
+        <th>Resolution Time</th>
+    </tr>
+    {% for row in data %}
+    <tr>
+        <td>{{ row['id'] }}</td>
+        <td>{{ row['ticket_text'] }}</td>
+        <td>{{ row['predicted_category'] }}</td>
+        <td>{{ row['predicted_time'] }} days</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<p>No complaint history found.</p>
+{% endif %}
+
+{% endblock %}
+
+</body>
+</html>

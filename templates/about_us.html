@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Smart Complaint Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    {% extends "base.html" %}
+
+    {% block content %}
+    <div class="content">
+        <h2>👩‍💻 About Us</h2>
+
+        <p>
+            Welcome to the <strong>AI Smart Complaint/Ticket Classifier & Resolution Time Predictor</strong>. This dashboard streamlines customer support workflows using advanced NLP and Machine Learning algorithms.
+        </p>
+
+        <h3>🚀 Key Features</h3>
+        <ul>
+            <li>🎯 <strong>Automatic Classification</strong> of complaints using ML/NLP models (SVM, Logistic Regression, BERT)</li>
+            <li>⏱️ <strong>Resolution Time Prediction</strong> using regression models</li>
+            <li>📉 <strong>Text Summarization</strong> and intelligent ticket routing</li>
+            <li>📊 <strong>Admin Dashboard</strong> with history, feedback, and analytics</li>
+            <li>🔁 <strong>Retraining Module</strong> using feedback loops</li>
+        </ul>
+
+        <hr>
+
+        <h3>👩‍🎓 Developer Profile</h3>
+        <p><strong>Name:</strong> Khushi Gupta</p>
+        <p><strong>Education:</strong> Final-year B.Tech Computer Science Student</p>
+        <p><strong>Specialization:</strong> Data Science & Artificial Intelligence</p>
+        <p><strong>Tech Stack:</strong> Python, Flask, SQLite, scikit-learn, NLTK, spaCy, TF-IDF, BERT, SHAP, Streamlit, HTML/CSS</p>
+
+        <p><em>This project was designed as a capstone solution that combines predictive modeling, NLP pipelines, and full-stack deployment.</em></p>
+
+        <hr>
+
+        <p>
+            💬 For improvements, queries or collaborations: <strong>Reach out via GitHub or LinkedIn</strong> 
+        </p>
+    </div>
+    {% endblock %}
+</body>
+</html>

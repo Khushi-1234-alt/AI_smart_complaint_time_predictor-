@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+{% extends "base.html" %}
+{% block content %}
+<h2>Submit Feedback</h2>
+
+{% if submitted %}
+    <div style="background-color: #d1fae5; color: #065f46; padding: 15px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #10b981;">
+        <strong>✅ Thank you for your feedback!</strong><br>
+        Your suggestion has been recorded.
+    </div>
+{% endif %}
+
+<form method="post">
+    <label for="complaint">Complaint:</label><br>
+    <textarea name="complaint" rows="4" required></textarea><br><br>
+
+    <label for="rating">Rating (1–5):</label><br>
+    <input type="number" name="rating" min="1" max="5" required><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
+
+</body>
+</html>

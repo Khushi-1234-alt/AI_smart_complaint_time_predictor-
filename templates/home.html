@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title if title else "Smart Dashboard" }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Welcome to the Smart Complaint Dashboard</h1>
+<p>This AI system helps classify support tickets and estimate resolution time automatically.</p>
+
+<img src="{{ url_for('static', filename='banner.jpg') }}" width="100%" style="border-radius: 8px; margin-bottom: 30px;">
+
+<div class="button-grid">
+    <a href="/history" class="nav-button">📁 View History</a>
+    <a href="/feedback" class="nav-button">📝 Submit Feedback</a>
+    <a href="/problems" class="nav-button">❗ Common Problems</a>
+    <a href="/about_us" class="nav-button">👤 About Us</a>
+</div>
+{% endblock %}
+
+</body>
+</html>
